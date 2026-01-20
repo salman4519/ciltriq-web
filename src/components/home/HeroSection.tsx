@@ -25,7 +25,7 @@ export const HeroSection = () => {
           >
             Eliminate revenue leaks.
             <br />
-            <span className="text-gray-400">End operational chaos.</span>
+            <span className="text-muted-foreground">End operational chaos.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -48,7 +48,7 @@ export const HeroSection = () => {
           >
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center h-14 px-8 text-base font-medium bg-foreground text-background transition-all hover:bg-gray-800 group"
+              className="inline-flex items-center justify-center h-14 px-8 text-base font-medium bg-foreground text-background transition-all hover:opacity-80 group"
             >
               Book a Systems Audit
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -113,7 +113,7 @@ export const HeroSection = () => {
         transition={{ duration: 0.6, delay: 1 }}
       >
         <motion.div
-          className="w-px h-16 bg-gray-300"
+          className="w-px h-16 bg-muted-foreground/30"
           initial={{ scaleY: 0 }}
           animate={{ scaleY: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}

@@ -62,7 +62,7 @@ export const Header = () => {
           >
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center h-10 px-6 text-sm font-medium bg-foreground text-background transition-all hover:bg-gray-800"
+              className="inline-flex items-center justify-center h-10 px-6 text-sm font-medium bg-foreground text-background transition-all hover:opacity-80"
             >
               Book a Systems Audit
             </Link>

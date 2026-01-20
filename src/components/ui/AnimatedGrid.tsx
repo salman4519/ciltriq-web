@@ -22,10 +22,10 @@ export const AnimatedGrid = () => {
             y1={`${y}%`}
             x2="100%"
             y2={`${y}%`}
-            stroke="hsl(0, 0%, 85%)"
+            stroke="hsl(0, 0%, 20%)"
             strokeWidth="0.5"
             initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 0.3 }}
+            animate={{ pathLength: 1, opacity: 0.4 }}
             transition={{ duration: 2, delay: i * 0.2, ease: "easeOut" }}
           />
         ))}
@@ -44,10 +44,10 @@ export const AnimatedGrid = () => {
             y1="0%"
             x2={`${x}%`}
             y2="100%"
-            stroke="hsl(0, 0%, 90%)"
+            stroke="hsl(0, 0%, 15%)"
             strokeWidth="0.5"
             initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 0.2 }}
+            animate={{ pathLength: 1, opacity: 0.3 }}
             transition={{ duration: 3, delay: 0.5 + i * 0.15, ease: "easeOut" }}
           />
         ))}
@@ -55,13 +55,13 @@ export const AnimatedGrid = () => {
 
       {/* Corner accent */}
       <motion.div
-        className="absolute top-0 left-0 w-32 h-32 border-l border-t border-gray-300"
+        className="absolute top-0 left-0 w-32 h-32 border-l border-t border-gray-700"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 0.5, scale: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       />
       <motion.div
-        className="absolute bottom-0 right-0 w-32 h-32 border-r border-b border-gray-300"
+        className="absolute bottom-0 right-0 w-32 h-32 border-r border-b border-gray-700"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 0.5, scale: 1 }}
         transition={{ duration: 1, delay: 0.7 }}

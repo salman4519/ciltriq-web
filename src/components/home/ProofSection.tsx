@@ -14,7 +14,7 @@ export const ProofSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative py-32 bg-foreground text-background">
+    <section ref={ref} className="relative py-32 bg-secondary">
       <div className="container-wide">
         {/* Section header */}
         <motion.div
@@ -23,26 +23,26 @@ export const ProofSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <span className="label-text text-gray-500">Results</span>
-          <h2 className="heading-lg mt-6 text-background">
+          <span className="label-text">Results</span>
+          <h2 className="heading-lg mt-6">
             Measured outcomes. Not promises.
           </h2>
         </motion.div>
 
         {/* Metrics grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px mt-16 bg-gray-700">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px mt-16 bg-border">
           {metrics.map((metric, index) => (
             <motion.div
               key={metric.label}
-              className="bg-foreground p-8 md:p-10"
+              className="bg-secondary p-8 md:p-10"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <span className="text-4xl md:text-5xl font-semibold tracking-tight">
+              <span className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground">
                 {metric.value}
               </span>
-              <p className="mt-4 text-sm text-gray-400 leading-relaxed">
+              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
                 {metric.label}
               </p>
             </motion.div>
@@ -51,21 +51,21 @@ export const ProofSection = () => {
 
         {/* Client logos placeholder */}
         <motion.div
-          className="mt-20 pt-16 border-t border-gray-700"
+          className="mt-20 pt-16 border-t border-border"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          <p className="label-text text-gray-400 text-center">
+          <p className="label-text text-center">
             Trusted by forward-thinking companies
           </p>
           <div className="flex flex-wrap items-center justify-center gap-12 mt-10">
             {[1, 2, 3, 4, 5].map((i) => (
               <div
                 key={i}
-                className="w-24 h-8 bg-gray-700/50 flex items-center justify-center"
+                className="w-24 h-8 bg-muted flex items-center justify-center"
               >
-                <span className="text-xs text-gray-500 font-medium">LOGO</span>
+                <span className="text-xs text-muted-foreground font-medium">LOGO</span>
               </div>
             ))}
           </div>

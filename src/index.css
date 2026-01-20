@@ -8,57 +8,57 @@
 
 @layer base {
   :root {
-    /* Pure monochrome palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 4%;
+    /* Inverted monochrome palette - Black background */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 4%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 4%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 4%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 4%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 4%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 4%;
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 0% 20%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 0% 80%;
+    --destructive-foreground: 0 0% 4%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 4%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 98%;
 
     --radius: 0px;
 
-    /* Custom Ciltriq tokens */
-    --gray-50: 0 0% 98%;
-    --gray-100: 0 0% 96%;
-    --gray-200: 0 0% 90%;
-    --gray-300: 0 0% 80%;
-    --gray-400: 0 0% 60%;
-    --gray-500: 0 0% 45%;
-    --gray-600: 0 0% 32%;
-    --gray-700: 0 0% 20%;
-    --gray-800: 0 0% 12%;
-    --gray-900: 0 0% 4%;
+    /* Custom Ciltriq tokens - Dark mode */
+    --gray-50: 0 0% 8%;
+    --gray-100: 0 0% 12%;
+    --gray-200: 0 0% 18%;
+    --gray-300: 0 0% 28%;
+    --gray-400: 0 0% 45%;
+    --gray-500: 0 0% 55%;
+    --gray-600: 0 0% 70%;
+    --gray-700: 0 0% 80%;
+    --gray-800: 0 0% 90%;
+    --gray-900: 0 0% 98%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 26%;
-    --sidebar-primary: 0 0% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 0 0% 91%;
-    --sidebar-ring: 0 0% 59%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 80%;
+    --sidebar-primary: 0 0% 90%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 0% 60%;
   }
 
   .dark {
@@ -166,18 +166,18 @@
     @apply text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-muted-foreground;
   }
 
-  /* Grid background */
+  /* Grid background - Dark mode */
   .grid-pattern {
     background-image: 
-      linear-gradient(to right, hsl(0 0% 92%) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(0 0% 92%) 1px, transparent 1px);
+      linear-gradient(to right, hsl(0 0% 12%) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(0 0% 12%) 1px, transparent 1px);
     background-size: 80px 80px;
   }
 
   .grid-pattern-fine {
     background-image: 
-      linear-gradient(to right, hsl(0 0% 94%) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(0 0% 94%) 1px, transparent 1px);
+      linear-gradient(to right, hsl(0 0% 10%) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(0 0% 10%) 1px, transparent 1px);
     background-size: 20px 20px;
   }
 

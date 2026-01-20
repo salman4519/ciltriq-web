@@ -142,7 +142,7 @@ const Services = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-32 bg-foreground text-background">
+        <section className="py-32 bg-secondary">
           <div className="container-narrow text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -150,16 +150,16 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <h2 className="heading-lg text-background">
+              <h2 className="heading-lg">
                 Not sure where to start?
               </h2>
-              <p className="body-lg mt-6 max-w-xl mx-auto text-gray-400">
+              <p className="body-lg mt-6 max-w-xl mx-auto">
                 Begin with an operational audit. We'll identify the highest-impact 
                 opportunities and create a clear roadmap for transformation.
               </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center h-14 px-10 mt-10 text-base font-medium bg-background text-foreground transition-all hover:bg-gray-200 group"
+                className="inline-flex items-center justify-center h-14 px-10 mt-10 text-base font-medium bg-foreground text-background transition-all hover:opacity-80 group"
               >
                 Schedule Your Audit
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
