@@ -1,12 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { AnimatedGrid } from "@/components/ui/AnimatedGrid";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { HeroSection } from "@/components/home/HeroSection";
+import { PainSection } from "@/components/home/PainSection";
+import { ServicesSection } from "@/components/home/ServicesSection";
+import { ProcessSection } from "@/components/home/ProcessSection";
+import { ProofSection } from "@/components/home/ProofSection";
+import { CTASection } from "@/components/home/CTASection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="relative min-h-screen">
+      <AnimatedGrid />
+      <Header />
+      <main className="relative z-10">
+        <HeroSection />
+        <PainSection />
+        <ServicesSection />
+        <ProcessSection />
+        <ProofSection />
+        <CTASection />
+      </main>
+      <Footer />
     </div>
   );
 };
