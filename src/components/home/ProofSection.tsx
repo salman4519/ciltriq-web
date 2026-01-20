@@ -50,7 +50,7 @@ export const ProofSection = () => {
         </div>
 
         {/* Client logos placeholder */}
-        <motion.div
+        {/* <motion.div
           className="mt-20 pt-16 border-t border-border"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
@@ -69,7 +69,7 @@ export const ProofSection = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

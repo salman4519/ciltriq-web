@@ -16,7 +16,25 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, this would send to a backend
+
+    // Construct WhatsApp message
+    const phoneNumber = "9562019132";
+    const text = `
+*New Contact Request*
+-------------------
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Company:* ${formData.company}
+*Challenge:* ${formData.challenge}
+    `.trim();
+
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+
+    // Show success state
     setSubmitted(true);
   };
 
@@ -38,7 +56,7 @@ const Contact = () => {
                 Let's fix what's broken.
               </h1>
               <p className="body-lg mt-6">
-                Tell us about your operational challenges. We'll review your situation 
+                Tell us about your operational challenges. We'll review your situation
                 and respond within one business day with initial thoughts and next steps.
               </p>
 

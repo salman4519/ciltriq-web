@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { FaInstagram, FaLinkedinIn, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import { Phone, Mail } from "lucide-react";
 
 const footerLinks = {
   company: [
@@ -14,6 +16,13 @@ const footerLinks = {
   ],
 };
 
+const socialLinks = [
+  { href: "https://www.linkedin.com/company/ciltriq/", icon: FaLinkedinIn, label: "LinkedIn" },
+  { href: "https://www.instagram.com/ciltriq_technologies/", icon: FaInstagram, label: "Instagram" },
+  { href: "https://www.facebook.com/share/1CPSmzGhvx/", icon: FaFacebookF, label: "Facebook" },
+  { href: "https://x.com/ciltriq", icon: FaXTwitter, label: "X" },
+];
+
 export const Footer = () => {
   return (
     <footer className="relative border-t border-border bg-background">
@@ -22,11 +31,43 @@ export const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="text-xl font-semibold tracking-tight">
-              Ciltriq
+              Ciltriq Technologies
             </Link>
             <p className="mt-4 body-md max-w-sm">
               Engineering business systems that eliminate chaos and unlock sustainable growth.
             </p>
+
+            {/* Social Media Icons */}
+            <div className="flex items-center gap-4 mt-6">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground transition-all duration-200"
+                >
+                  <social.icon size={18} />
+                </a>
+              ))}
+            </div>
+
+            {/* Contact Info */}
+            <div className="mt-6 space-y-2">
+              <a
+                href="tel:+919562019132"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Phone size={16} /> +91 9562019132
+              </a>
+              <a
+                href="mailto:ciltriq@gmail.com"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Mail size={16} /> ciltriq@gmail.com
+              </a>
+            </div>
           </div>
 
           {/* Company Links */}

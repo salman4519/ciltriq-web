@@ -1,11 +1,22 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import Lottie from "lottie-react";
 
 export const HeroSection = () => {
+  const [animationData, setAnimationData] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/waves.json")
+      .then((res) => res.json())
+      .then((data) => setAnimationData(data))
+      .catch((err) => console.error("Failed to load animation:", err));
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20">
-      <div className="container-wide relative z-10">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      <div className="container-wide relative z-10 grid lg:grid-cols-2 gap-12 items-center">
         <div className="max-w-4xl">
           {/* Label */}
           <motion.div
@@ -35,7 +46,7 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            We engineer business systems that run without you. Diagnose inefficiencies, 
+            We engineer business systems that run without you. Diagnose inefficiencies,
             automate operations, and build infrastructure that scales.
           </motion.p>
 
@@ -46,13 +57,15 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <Link
-              to="/contact"
+            <a
+              href="https://wa.me/9562019132?text=Hello! I'm interested in your services."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-14 px-8 text-base font-medium bg-foreground text-background transition-all hover:opacity-80 group"
             >
-              Book a Systems Audit
+              Talk to Our Team
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </a>
             <Link
               to="/services"
               className="inline-flex items-center justify-center h-14 px-8 text-base font-medium border border-border bg-background text-foreground transition-all hover:bg-secondary"
@@ -62,46 +75,14 @@ export const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Visual element - Diagonal line */}
+        {/* Visual element - Lottie Animation */}
         <motion.div
-          className="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          className="hidden lg:block w-full max-w-[500px] mx-auto"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <svg
-            width="400"
-            height="400"
-            viewBox="0 0 400 400"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="opacity-30"
-          >
-            <motion.path
-              d="M0 400 L400 0"
-              stroke="currentColor"
-              strokeWidth="1"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 2, delay: 0.8 }}
-            />
-            <motion.path
-              d="M50 400 L400 50"
-              stroke="currentColor"
-              strokeWidth="0.5"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 2, delay: 1 }}
-            />
-            <motion.path
-              d="M100 400 L400 100"
-              stroke="currentColor"
-              strokeWidth="0.5"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 2, delay: 1.2 }}
-            />
-          </svg>
+          {animationData && <Lottie animationData={animationData} loop={true} className="w-full h-auto" />}
         </motion.div>
       </div>
 
