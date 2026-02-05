@@ -54,11 +54,11 @@ const EinsteinIQCaseStudy = () => {
                 "Seamless Handover: Only warm, qualified leads are routed to human sales agents."
             ]
         },
-        results: [
-            "90%+ Reduction in Junk Leads: The sales funnel is now clean, with agents seeing only relevant queries.",
-            "40%+ Engagement Rate: Immediate responses have significantly boosted user interaction and trust.",
-            "24/7 Availability: Sales happen around the clock, not just during office hours.",
-            "Higher Conversion: Qualified leads convert at a much higher rate due to timely engagement."
+        targets: [
+            "90%+ Reduction in Junk Leads: Target to clean the sales funnel so agents see only relevant queries.",
+            "40%+ Engagement Rate: Aiming for immediate responses to boost user interaction and trust.",
+            "24/7 Availability: Enable sales around the clock, not just during office hours.",
+            "Higher Conversion: Qualified leads expected to convert at a higher rate due to timely engagement."
         ],
         quote: {
             text: "Riza has been a game-changer for our social sales. We no longer waste time on junk leads, and our response times are instant. Our team is happier and more productive.",
@@ -182,14 +182,14 @@ const EinsteinIQCaseStudy = () => {
                                 </a>
                             </div>
 
-                            {/* Results */}
+                            {/* Targets */}
                             <div>
-                                <h3 className="text-2xl font-semibold mb-4 text-foreground">The Results</h3>
+                                <h3 className="text-2xl font-semibold mb-4 text-foreground">The Targets</h3>
                                 <div className="grid gap-4">
-                                    {study.results.map((item, idx) => (
+                                    {study.targets.map((item, idx) => (
                                         <div key={idx} className="flex items-start gap-4 p-4 rounded-xl bg-secondary/10 border border-border/50">
                                             <div className="p-2 bg-primary/10 rounded-lg text-primary shrink-0">
-                                                <TrendingUp className="w-5 h-5" />
+                                                <Target className="w-5 h-5" />
                                             </div>
                                             <div>
                                                 <strong className="text-foreground block mb-1">{item.split(':')[0]}</strong>
