@@ -60,10 +60,7 @@ const EinsteinIQCaseStudy = () => {
             "24/7 Availability: Enable sales around the clock, not just during office hours.",
             "Higher Conversion: Qualified leads expected to convert at a higher rate due to timely engagement."
         ],
-        quote: {
-            text: "Riza has been a game-changer for our social sales. We no longer waste time on junk leads, and our response times are instant. Our team is happier and more productive.",
-            author: "Sales Director, EinsteinIQ Cosmetics"
-        },
+
         benefits: [
             "Enhanced Team Efficiency: Stop wasting time on spam.",
             "Increased Revenue: Capture every potential sale instantly.",
@@ -200,11 +197,7 @@ const EinsteinIQCaseStudy = () => {
                                 </div>
                             </div>
 
-                            {/* Quote */}
-                            <div className="bg-secondary/20 border-l-4 border-primary p-6 rounded-r-xl my-8">
-                                <p className="text-xl italic text-foreground mb-4">"{study.quote.text}"</p>
-                                <cite className="text-sm font-medium text-muted-foreground not-italic">— {study.quote.author}</cite>
-                            </div>
+
 
                             {/* Benefits */}
                             <div>

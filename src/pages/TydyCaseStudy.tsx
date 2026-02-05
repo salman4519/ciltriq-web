@@ -59,10 +59,7 @@ const TydyCaseStudy = () => {
             "Streamlined Fulfillment: Zero manual errors in the address and invoice generation process.",
             "Instant Scalability: The systems handles 10x spikes in volume with no additional headcount."
         ],
-        quote: {
-            text: "Ciltriq's automation has completely transformed our operations. We can now focus on growth while the system handles the heavy lifting of order management.",
-            author: "Operations Head, Tydy"
-        },
+
         benefits: [
             "Operational Efficiency: Drastic reduction in manual overhead.",
             "Rapid Scalability: Handle peak loads effortlessly.",
@@ -181,11 +178,7 @@ const TydyCaseStudy = () => {
                                 </div>
                             </div>
 
-                            {/* Quote */}
-                            <div className="bg-secondary/20 border-l-4 border-primary p-6 rounded-r-xl my-8">
-                                <p className="text-xl italic text-foreground mb-4">"{study.quote.text}"</p>
-                                <cite className="text-sm font-medium text-muted-foreground not-italic">— {study.quote.author}</cite>
-                            </div>
+
 
                             {/* Benefits */}
                             <div>
